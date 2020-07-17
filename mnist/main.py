@@ -50,7 +50,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
                 break
 
 
-def test(model, device, test_loader):
+def test(args, model, device, test_loader):
     model.eval()
     test_loss = 0
     correct = 0
@@ -123,7 +123,7 @@ def main():
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
     for epoch in range(1, args.epochs + 1):
         train(args, model, device, train_loader, optimizer, epoch)
-        test(model, device, test_loader)
+        test(args, model, device, test_loader)
         scheduler.step()
 
     if args.save_model:
