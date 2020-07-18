@@ -1,0 +1,164 @@
+     1	    77	Soumith Chintala
+     2	    63	Bryan Marcus McCann
+     3	    34	Adam Lerer
+     4	    23	soumith
+     5	    20	Rohan Varma
+     6	    14	Adam Paszke
+     7	    13	Sam Gross
+     8	     9	Sudarshan Raghunathan
+     9	     7	Jessica Lin
+    10	     7	Kai Arulkumaran
+    11	     6	Kaixhin
+    12	     5	chao1224
+    13	     4	Alykhan Tejani
+    14	     3	Bryan McCann
+    15	     3	Marat Dukhan
+    16	     3	Omkar Salpekar
+    17	     3	Shen Li
+    18	     3	Stephen Merity
+    19	     3	Teaung Song
+    20	     3	Xingdong Zuo
+    21	     3	mattip
+    22	     3	mrshenli
+    23	     3	smartkiwi
+    24	     2	Curtis G. Northcutt
+    25	     2	Edgar Riba
+    26	     2	Eli Uriegas
+    27	     2	Kasim Te
+    28	     2	Luke Yeager
+    29	     2	Nikolai Morin
+    30	     2	Shahriar
+    31	     2	Teng Li
+    32	     2	Tongzhou Wang
+    33	     2	Will Feng
+    34	     2	Zeming Lin
+    35	     2	andreh7
+    36	     2	bddppq
+    37	     2	daquexian
+    38	     2	fshabashev
+    39	     2	surgan12
+    40	     2	박승원
+    41	     1	Abhishek Kadian
+    42	     1	Achal Dave
+    43	     1	Aleksandr Panchul
+    44	     1	Alfredo Canziani
+    45	     1	Andreas Köpf
+    46	     1	Andrew Gambardella
+    47	     1	Andrew Naguib
+    48	     1	Arkadip Bhattacharya
+    49	     1	Atsushi SAKAI
+    50	     1	Aziz Alto
+    51	     1	Bart Olsthoorn
+    52	     1	Ben Eyal
+    53	     1	Bobby DeSimone
+    54	     1	Bowen Bao
+    55	     1	Bradley McDanel
+    56	     1	Brandon Lin
+    57	     1	Brett Koonce
+    58	     1	Brian Vaughan
+    59	     1	Cheng-Yen Yang
+    60	     1	Clement Farabet
+    61	     1	Clemente Cuevas
+    62	     1	Daniel Nouri
+    63	     1	David Tolpin
+    64	     1	Dmitry Ulyanov
+    65	     1	Du Phan
+    66	     1	Durk Kingma
+    67	     1	Edward Z. Yang
+    68	     1	Fisher Yu
+    69	     1	Fu Zihao
+    70	     1	Guangshuo Chen
+    71	     1	Guanheng George Zhang
+    72	     1	Henderake
+    73	     1	Jacob Austin
+    74	     1	James Owers
+    75	     1	Jason Park
+    76	     1	Jerry Liu
+    77	     1	Jerry Ma
+    78	     1	John Neil
+    79	     1	Joost Bastings
+    80	     1	Joost van Amersfoort
+    81	     1	Joseph K J
+    82	     1	Julien Cornebise
+    83	     1	Junonia
+    84	     1	Justin
+    85	     1	KAI ZHAO
+    86	     1	Kartik Srivastava
+    87	     1	Ken Fehling
+    88	     1	Kentaro Wada
+    89	     1	Kento Nozawa
+    90	     1	Kushashwa Ravi Shrimali
+    91	     1	Lawrence Neal
+    92	     1	Li Dong
+    93	     1	Lu Fang
+    94	     1	Manash Kumar Mandal
+    95	     1	Matti Picus
+    96	     1	Naofumi Tomita
+    97	     1	Natalia Gimelshein
+    98	     1	Ofir Press
+    99	     1	Peter Frendl
+   100	     1	Peter Goldsborough
+   101	     1	Philip Meier
+   102	     1	Pushkal Katara
+   103	     1	Qinglong Wang
+   104	     1	Quan Vuong
+   105	     1	Riko
+   106	     1	Robin Dinse
+   107	     1	Ryo Takahashi
+   108	     1	Ryuichi Yamamoto
+   109	     1	Sandeep Subramanian
+   110	     1	Sebastian Meßmer
+   111	     1	Sergei Chicherin
+   112	     1	Sergey Zagoruyko
+   113	     1	Seth Weidman
+   114	     1	Shagun Sodhani
+   115	     1	Shengchao Liu
+   116	     1	Shital Shah
+   117	     1	Siva Reddy
+   118	     1	StandbyMe
+   119	     1	Taufiquzzaman Peyash
+   120	     1	Thomas Viehmann
+   121	     1	Timothy Gebhard
+   122	     1	Tom Sercu
+   123	     1	Varun Agrawal
+   124	     1	Vipin Pillai
+   125	     1	Vishwak Srinivasan
+   126	     1	Vitaly Fedyunin
+   127	     1	WangXi
+   128	     1	Xinwei He
+   129	     1	YLHii
+   130	     1	Yang Yang
+   131	     1	Yonghye Kwon
+   132	     1	Youngwook
+   133	     1	Yüduo Wu
+   134	     1	Zhengping Che
+   135	     1	Zhuo Weng
+   136	     1	Zihao Fu
+   137	     1	aromnvidia
+   138	     1	bassbone
+   139	     1	bintonto
+   140	     1	boathit
+   141	     1	boscotsang
+   142	     1	dmitriy-serdyuk
+   143	     1	ebetica
+   144	     1	gaurav pathak
+   145	     1	huqinghao
+   146	     1	joaqo
+   147	     1	joistick11
+   148	     1	leotam
+   149	     1	lzxzy
+   150	     1	nadavbh12
+   151	     1	nsvanirudh
+   152	     1	pavel-
+   153	     1	pbartet
+   154	     1	peter
+   155	     1	peterjc123
+   156	     1	rarilurelo
+   157	     1	saikrishna_1996
+   158	     1	sergeant-wizard
+   159	     1	siran
+   160	     1	sulc
+   161	     1	trault14
+   162	     1	y0ast
+   163	     1	晏旭瑞
+   164	     1	이중건 Isaac Lee
