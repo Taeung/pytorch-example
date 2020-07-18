@@ -130,5 +130,9 @@ def main():
         torch.save(model.state_dict(), "mnist_cnn.pt")
 
 
+
+
+
+
 if __name__ == '__main__':
     main()
