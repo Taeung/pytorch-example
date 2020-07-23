@@ -51,6 +51,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
 
 
 def test(args, model, device, test_loader):
+	test_code = 31
     model.eval()
     test_loss = 0
     correct = 0
@@ -132,3 +133,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
