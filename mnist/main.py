@@ -5,7 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import json
-import request as reqq
+import request as req
 
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
@@ -22,7 +22,7 @@ class Net(nn.Module):
         self.fc2 = nn.Linear(128, 10)
 
     def forward(self, x):
-        x = self.conv1(x)
+        x = self.conv1(x)git 
         x = F.relu(x)
         x = self.conv2(x)
         x = F.relu(x)
