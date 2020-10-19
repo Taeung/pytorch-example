@@ -1,4 +1,4 @@
-# Basic MNIST Example
+# jin
 
 ```bash
 pip install -r requirements.txt
