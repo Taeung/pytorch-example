@@ -1,4 +1,4 @@
-# My name is Seungchan Kim
+# My name is Kim seungchan
 # Basic MNIST Example
 
 ```bash
