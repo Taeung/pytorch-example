@@ -1,3 +1,4 @@
+# My name is seungmin kim
 # Basic MNIST Example
 
 ```bash
