@@ -1,3 +1,4 @@
+# My name is Gyeongseo Lee
 # Basic MNIST Example
 
 ```bash
