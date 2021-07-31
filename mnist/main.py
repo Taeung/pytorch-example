@@ -7,7 +7,6 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 
-print('hello')
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -22,6 +21,7 @@ class Net(nn.Module):
         x = self.conv1(x)
         x = F.relu(x)
         x = self.conv2(x)
+        x = F.relu(x)
         x = F.max_pool2d(x, 2)
         x = self.dropout1(x)
         x = torch.flatten(x, 1)
@@ -32,7 +32,6 @@ class Net(nn.Module):
         output = F.log_softmax(x, dim=1)
         return output
 
-print('Hello')w
 
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
