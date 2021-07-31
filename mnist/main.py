@@ -7,7 +7,7 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 
-
+print('hello')
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -32,6 +32,7 @@ class Net(nn.Module):
         output = F.log_softmax(x, dim=1)
         return output
 
+print('Hello')w
 
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
@@ -77,7 +78,7 @@ def main():
     parser.add_argument('--test-batch-size', type=int, default=1000, metavar='N',
                         help='input batch size for testing (default: 1000)')
     parser.add_argument('--epochs', type=int, default=14, metavar='N',
-                        help='number of epochs to train (default: 10)')
+                        help='number of epochs to train (default: 14)')
     parser.add_argument('--lr', type=float, default=1.0, metavar='LR',
                         help='learning rate (default: 1.0)')
     parser.add_argument('--gamma', type=float, default=0.7, metavar='M',
