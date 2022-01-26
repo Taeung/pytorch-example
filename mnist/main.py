@@ -8,6 +8,8 @@ from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 import requests as req
 
+# test alliance please ignore
+
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
