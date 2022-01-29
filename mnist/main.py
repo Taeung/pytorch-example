@@ -1,4 +1,4 @@
-fromm __future__ import print_function
+from __future__ import print_function
 import argparse
 import torch
 import torch.nn as nn
