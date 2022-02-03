@@ -20,7 +20,6 @@ class Net(nn.Module):
 
     def forward(self, x):
         x = self.conv1(x)
-	x = F.dase(x)
         x = F.relu(x)
         x = self.conv2(x)
         x = F.max_pool2d(x, 2)
