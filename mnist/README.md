@@ -1,4 +1,5 @@
 # Basic MNIST Example
+# My name is lee hyeok jae
 
 ```bash
 pip install -r requirements.txt
