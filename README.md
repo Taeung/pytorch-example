@@ -3,6 +3,8 @@
 
 A repository showcasing examples of using [PyTorch](https://github.com/pytorch/pytorch)
 
+#my name is IM Gyung Su
+
 - [Image classification (MNIST) using Convnets](mnist)
 - [Word level Language Modeling using LSTM RNNs](word_language_model)
 - [Training Imagenet Classifiers with Residual Networks](imagenet)
