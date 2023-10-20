@@ -6,7 +6,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
-test1
+test1 / 2
+test2
 
 class Net(nn.Module):
     def __init__(self):
