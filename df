@@ -1,0 +1,830 @@
+Abhishek Kadian (1):
+      fast-neural-style example (#129)
+
+Achal Dave (1):
+      Add link to script for preparing imagenet val data
+
+Adam Lerer (34):
+      fix mnist example
+      initial commit of word language model
+      add PTB dataset
+      Add multiple layers to RNN
+      Fixed comments, and fixed discrepancies to match torch perplexity
+      minor
+      Switch to torch rnn, using cudnn
+      remove rnn namespace
+      Add README and generate.py script
+      initial checkin
+      Got preprocess.py working, and some of train.py
+      checkpoint before DataParallel
+      train code close to done
+      train and dataset stuff working
+      remove lua
+      train.py is running
+      added CUDA, fixed bugs; but still loss is nan
+      Trains for multiple epochs
+      fixes
+      add bidirectional, fix bugs, add options
+      delete lots of unnecessary files
+      feed encoder hidden states to decoder; and other debugging
+      memory efficient decoding
+      memory efficient decoding
+      multi-layer decoder
+      random stuff
+      Initial checkin
+      add data text files
+      cleanup train.py
+      Remove language features leftovers
+      train from checkpoint
+      final cleanup
+      [onmt] Update README with models; move data to AWS
+      Swap PTB for Wikitext-2 (which is open access)
+
+Adam Paszke (14):
+      Add MNIST example
+      Fixes for 2.7
+      Update example
+      Fix for changed .grad type
+      VAE -> vae
+      Improve MNIST example
+      Add hogwild example
+      Add REINFORCE example
+      Fix dropout flag
+      Refactor language modeling example
+      Fix regression example
+      Fix CUDA mode in VAE example
+      Bugs In MNIST (#175)
+      Add an option to perform distributed ImageNet training (#185)
+
+Aleksandr Panchul (1):
+      correcting the pipeline rpc example (#773)
+
+Alfredo Canziani (1):
+      Update main.py (#337)
+
+Alykhan Tejani (4):
+      Add super resolution example
+      add lmdb to requirements of dcgan. Add instructions to download LSUN to dcgan/README
+      update formatting in README
+      Scale -> Resize + RandomSizedCrop -> RandomResizedCrop
+
+Andreas Köpf (1):
+      Add arXiv link to VAE paper
+
+Andrew Gambardella (1):
+      fixed divide by zero error
+
+Andrew Naguib (1):
+      enhancing readability (#495)
+
+Arkadip Bhattacharya (1):
+      fix: Namespace issue of Reduction in CPP MNIST (#673)
+
+Atsushi SAKAI (1):
+      Consider PyTorch 1.1 for _download_url_to_file module path (#565)
+
+Aziz Alto (1):
+      remove unused lines (#84)
+
+Bart Olsthoorn (1):
+      Change reusing of Variables (#150)
+
+Ben Eyal (1):
+      Fix name of dataset (#451)
+
+Bobby DeSimone (1):
+      Add model_names back. Fixes #195
+
+Bowen Bao (1):
+      fix fast_neural_style --export_onnx (#397)
+
+Bradley McDanel (1):
+      Consistent learning rate for ResNet in readme (#556)
+
+Brandon Lin (1):
+      fix: `Multinomial` is now `Categorical`
+
+Brett Koonce (1):
+      minor spelling, evaluted->evaluated
+
+Brian Vaughan (1):
+      add a script to run all pytorch examples (#591)
+
+Bryan Marcus McCann (63):
+      snli example; no glove
+      adding some options
+      adding glove vectors
+      lowercasing and caching
+      adding projection layer
+      adding some to the READMEs
+      defaulting unidirectional
+      simpler vector loading and defaults
+      fixing bug in bidirectional and setting to default
+      updating glove vector interface with torchtext
+      updates for torchtext and loading from snapshot
+      removing default snapshot and setting cuda to avoid pytroch issue 689
+      OpenNMT example now updated and training
+      params should not be reinitialized for loaded models
+      moving param init
+      start_epoch should increment from saved epoch
+      multi-gpu via DataParallel
+      allowing the option of single device
+      altering translate to be compatible with nn.DataParallel
+      should not re-init params on load from chkpt
+      friendlier gpu options in translate
+      update translate.py gpu option
+      translate bug fix
+      README changes for multi-gpu
+      removing reinit of checkpoint params again
+      using split instead of chunk
+      replacing opt.cuda with opt.gpus as needed
+      using ModuleList
+      default type for start_decay_at
+      decoder hidden state fix
+      nn.clip_grad_norm
+      adding src/tgt tokens/s
+      index in verbose translate was fixed
+      bug in total num predicted words
+      Variables in Translator can be volatile
+      removing unnecessary def
+      allowing lowercase option
+      pointing out one way to do bleu scores in README
+      adding files to ignore
+      preprocess needs to use lower option
+      tips for non-demo mt via flickr30k example
+      cleaning up readme
+      cudnn decoder
+      reverting cudnn decoder to lstmcell
+      new DataParallel allows dim 1; remove unnecessary transposes; add train_ppl to chkpt
+      mend
+      allows use of models trained on dataset to be trained on another; doesn't augment vocab
+      manual unrolling was broken for brnn; patch until varlen rnn replacement
+      allowing learning rate update for non-sgd optimizers
+      adding option to shuffle mini-batches
+      adding word level accuracy as a metric
+      touch ups and README updates
+      allowing validation data to volatile
+      num_batches was off by one
+      batch printing was off
+      curriculum off by one
+      accuracy now an average over log_interval batches
+      off by one in printing batch number
+      removing unused variables
+      saving with state_dict
+      state_dicts for translation and optimizer
+      backwards compatibility for checkpoints
+      one more lowercase in dict
+
+Bryan McCann (3):
+      clean up the readme
+      spacing in readme
+      Grouping bash commands together
+
+Cheng-Yen Yang (1):
+      Fix grad in-place operation (#779)
+
+Clement Farabet (1):
+      Making CUDA optional for MNIST example
+
+Clemente Cuevas (1):
+      Command Line Interface backwards compatible fix for models.py (#85)
+
+Curtis G. Northcutt (2):
+      Fixes bug when loading checkpoint of different GPU (#515)
+      Fix load model when a single GPU is used (#629)
+
+Daniel Nouri (1):
+      open without 'rb' caused Python 3 to open this in text mode and fail (#133)
+
+David Tolpin (1):
+      h rather than c should be fed into the next layer of LSTM (#222)
+
+Dmitry Ulyanov (1):
+      Fix random seeding in DCGAN (#108)
+
+Du Phan (1):
+      apply normalization for output image of dcgan generator (#127)
+
+Durk Kingma (1):
+      Fix bug in reparameterize() (#419)
+
+Edgar Riba (2):
+      fix direct access to subsections
+      Fix highlighted headers in readme (#122)
+
+Edward Z. Yang (1):
+      Merge pull request #627 from peterjc123/win_fix
+
+Eli Uriegas (2):
+      word_language_model: Fix Transformer init_weights
+      Merge pull request #791 from seemethere/fix_transformer
+
+Fisher Yu (1):
+      add flush to print (#81)
+
+Fu Zihao (1):
+      Change the calculation method of the match number. Since if dataset number is smaller than 64, it will be 0.
+
+Guangshuo Chen (1):
+      Fix an argument instruction in mnist_hogwild
+
+Guanheng George Zhang (1):
+      Apply Transformer model for the word language problem in pytorch/examples (#555)
+
+Henderake (1):
+      Switch the model to evaluation mode before generation
+
+Jacob Austin (1):
+      removed two deprecated function calls, added __name__ check to address multithreading bug in dataloader (#414)
+
+James Owers (1):
+      Correct typo in default value within help (#667)
+
+Jason Park (1):
+      Fix arg of LSUN: db_path -> root (#319)
+
+Jerry Liu (1):
+      This PR fixes error raised during element-wise variable division. (#182)
+
+Jerry Ma (1):
+      Add support for deteriminstic behavior in ImageNet benchmark. (#381)
+
+Jessica Lin (7):
+      Merge pull request #705 from rohan-varma/add_param_server
+      Merge pull request #733 from osalpekar/dist_autograd_update
+      Merge pull request #763 from mrshenli/ddp
+      Merge branch 'master' into master
+      Merge pull request #743 from drdarshan/master
+      Merge pull request #796 from mrshenli/pileline
+      Merge pull request #792 from mrshenli/batch
+
+John Neil (1):
+      Fix errors executing run_python_examples.sh "install_deps,run_all" (#787)
+
+Joost Bastings (1):
+      Add tokenization (#417)
+
+Joost van Amersfoort (1):
+      add python2 compatibility, use dataloader, explicit train and eval call on model, general clean up
+
+Joseph K J (1):
+      Reflecting the change in VAE paper name (#616)
+
+Julien Cornebise (1):
+      Fix help message for no-cuda (#153)
+
+Junonia (1):
+      Update main.py (#65)
+
+Justin (1):
+      Fix indentation to be self-consistent (#279)
+
+KAI ZHAO (1):
+      fix a typo (#466)
+
+Kai Arulkumaran (7):
+      Prevent 2 forward passes with detach
+      Use nn.init from core to init SR example (#189)
+      Remove unused imports in SR example (#190)
+      Change "gain" -> "calculate_gain" (#192)
+      Remove unused math import
+      Fix VAE losses (sum over everything) (#296)
+      Tidy var names for RL examples (#513)
+
+Kaixhin (6):
+      Rename REINFORCE to actor-critic
+      Balance VAE losses, add reconstruction + sampling
+      Add support for CUDA
+      Fix VAE loss + improve reconstruction viz
+      Update RL examples to use torch.distributions instead of reinforce
+      Fix action indexing
+
+Kartik Srivastava (1):
+      Updated clipping to torch.nn.utils.clip_grad_norm_ (#403)
+
+Kasim Te (2):
+      Update dcgan.cpp (#765)
+      Fix cpp/mnist CMakeList build. (#764)
+
+Ken Fehling (1):
+      README: Correct case and add link to PyTorch (#188)
+
+Kentaro Wada (1):
+      Add instruction to use specified GPU id (#73)
+
+Kento Nozawa (1):
+      Use torchtext 0.3.1 (#423)
+
+Kushashwa Ravi Shrimali (1):
+      Added Transfer Learning using Libtorch and OpenCV (#626)
+
+Lawrence Neal (1):
+      Fix UserWarning in two examples (#293)
+
+Li Dong (1):
+      snli/model.py: can run using Python 2.* (#145)
+
+Lu Fang (1):
+      Export Word Language Model to ONNX (#348)
+
+Luke Yeager (2):
+      Add logistic regression example
+      Fix logistic regression example
+
+Manash Kumar Mandal (1):
+      Fix initialization of weight of Decoder (#775)
+
+Marat Dukhan (3):
+      Auto-detect architectures in ImageNet example
+      Remove module names from arch list in Imagenet example (#62)
+      Fix typo in logging of ImageNet model loading
+
+Matti Picus (1):
+      tweak running examples without cuda (#794)
+
+Naofumi Tomita (1):
+      fix broken args\n\nFor multiple long options python takes the first as attribute name by default. The latest commit swapped the order of options that causes the script an error. Added dest option to explicitly specify the valid attribute name (#454)
+
+Natalia Gimelshein (1):
+      cast croppint args to ints, fix bottleneck params
+
+Nikolai Morin (2):
+      Document the data arrangement in word_language_model
+      Consistent newlines
+
+Ofir Press (1):
+      update attribution of weight tying in word_language_model (#109)
+
+Omkar Salpekar (3):
+      updated dist_autograd and dist_optim to be functional per API change
+      Fix Parameter Server Example (#774)
+      Fix parameter server command line options in README (#776)
+
+Peter Frendl (1):
+      mnist_hogwild manual breaking of gradient sharing removed (#138)
+
+Peter Goldsborough (1):
+      Add cpp folder for C++ frontend examples (#492)
+
+Philip Meier (1):
+      Refactor print progress of ImageNet training (#529)
+
+Pushkal Katara (1):
+      Update README.md for Arguments (#596)
+
+Qinglong Wang (1):
+      some wrong typing (#125)
+
+Quan Vuong (1):
+      replace model by policy (#154)
+
+Riko (1):
+      Removing unused variable (#612)
+
+Robin Dinse (1):
+      Change test DataLoader to use the test batch size
+
+Rohan Varma (20):
+      WIP: parameter server example
+      Update
+      Added data and loss to show actual training
+      Updat
+      Make multi-host setup possible
+      Address comments and train on GPU
+      Format
+      Added instructions
+      Still need to take in CUDA device programatically
+      Added support for using 2 GPUs
+      update
+      Update
+      Move tensors in and out of GPU
+      UPdate
+      Use f-strings
+      update
+      update
+      update
+      update
+      update (#748)
+
+Ryo Takahashi (1):
+      Update word-level LM arguments in README (#786)
+
+Ryuichi Yamamoto (1):
+      vae: Fix `UserWarning` (#220)
+
+Sam Gross (13):
+      ImageNet example
+      Remove numpy dependency
+      Assign child modules via attributes
+      Update ImageNet training code
+      Fixes to ImageNet training script (#19)
+      Add AlexNet model definition
+      Used models from torchvision (#26)
+      Update README.md (#39)
+      Revert "add flush to print" (#92)
+      Fix bugs and improve performance
+      Fix actor_critic example (#301)
+      Fix call to Tensor.cuda()
+      Fix Python 2 compatibility (#575)
+
+Sandeep Subramanian (1):
+      Fixed bug with models apart from LSTMs
+
+Sebastian Meßmer (1):
+      Onnx export (#322)
+
+Sergei Chicherin (1):
+      fix 0.4 version compliance (#354)
+
+Sergey Zagoruyko (1):
+      Correct total batch num in dcgan
+
+Seth Weidman (1):
+      Clean readme (#610)
+
+Shagun Sodhani (1):
+      modified the hogwild example to perform testing outside the different training processes (#426)
+
+Shahriar (2):
+      Added regression example (#587)
+      C++ custom dataset (#583)
+
+Shen Li (3):
+      Adding DDP example
+      Adding Batch RPC example
+      Update pipeline parallel example to use RRef helpers
+
+Shengchao Liu (1):
+      fix bugs in generalization error calculation (#179)
+
+Shital Shah (1):
+      Convert to proper script with main(), fix #352 (#353)
+
+Siva Reddy (1):
+      bug fix: vocab.load_vectors signature update
+
+Soumith Chintala (77):
+      Merge pull request #1 from adamlerer/mnist
+      Merge pull request #3 from clementfarabet/master
+      fix mnist example for master
+      Merge pull request #4 from adamlerer/rnn
+      Merge pull request #5 from colesbury/setattr
+      doc
+      Merge pull request #7 from adamlerer/rnn_generate
+      Merge pull request #8 from ngimel/resnet_fixes
+      dcgan
+      Merge pull request #11 from pytorch/dcgan
+      Update README.md
+      removing redundant transforms now
+      Merge pull request #15 from MaximumEntropy/master
+      Merge pull request #16 from colesbury/imagenet
+      Merge pull request #17 from szagoruyko/patch-1
+      cleanup mnist
+      Merge pull request #18 from pytorch/mnistcleanup
+      Merge pull request #20 from y0ast/master
+      Update README.md
+      Merge pull request #23 from colesbury/alexnet
+      Update README.md
+      Merge pull request #27 from alykhantejani/super_resolution_example
+      Update README.md
+      Merge pull request #28 from Maratyszcza/master
+      Merge pull request #29 from pytorch/grad_fix
+      Container -> Module
+      Merge branch 'master' into onmt
+      Merge pull request #25 from adamlerer/onmt
+      Update README.md
+      Update README.md
+      Update README.md
+      Merge pull request #31 from pytorch/reinforce
+      Update README.md
+      Merge pull request #32 from Kaixhin/master
+      Merge pull request #33 from pytorch/rnn
+      Merge pull request #34 from ebetica/fix1
+      Merge pull request #38 from andreaskoepf/patch-1
+      Merge pull request #40 from lukeyeager/logreg
+      Merge pull request #41 from lukeyeager/logreg-fix
+      Merge pull request #42 from ebetica/reinforce
+      Merge pull request #44 from smartkiwi/master
+      fix requirements
+      Merge pull request #48 from pytorch/regression
+      Merge pull request #52 from pytorch/vae_fix
+      remove fictitious play stuff from example that was accidentally committed
+      Merge pull request #57 from bmccann/snli_glove_vectors
+      Merge pull request #61 from tomsercu/master
+      Create LICENSE
+      move OpenNMT
+      remove OpenNMT and link to elsewhere
+      lr floating division
+      Update README.md
+      fix for 0.2
+      fix for 0.2
+      mnist 0.2 fixes
+      fix accuracy bug
+      codemod for 0.4 (#331) (#336)
+      Update main.py
+      precision -> accuracy
+      python 2 fix
+      remove references to PTB perplexity numbers
+      remove more spurious perplexity references
+      clarify imagenet download
+      Remove for double usage of log_softmax (#721)
+      Fix shebang (#686)
+      added missing non-linearity
+      README.md : Add descriptions for optional arguments (#712)
+      Update README.md for Argument (#711)
+      Update .gitignore (#709)
+      Add help message for snli example (#707)
+      fix missing/extra spaces (#703)
+      typo in comment (#701)
+      dcgan: using `fake` dataset still requires dataroot parameter (#699)
+      Fix typo in comment (#690)
+      change regression/poly_desc() (#684)
+      more complete description for ArgumentParser (#670)
+      Revert "loss detach (#731)" (#758)
+
+StandbyMe (1):
+      Update model.py (#625)
+
+Stephen Merity (3):
+      Replace clip_gradient with torch's newly included clip_grad_norm (fixes #95)
+      PTB LM example now has far better perplexity for both large (72.30) and small (87.17) models
+      Replace WikiText-2 files with correct dataset (#264)
+
+Sudarshan Raghunathan (9):
+      Create README.md
+      Create example.py
+      Add files via upload
+      Remove scaling of image
+      Remove math notation from README, replace with italics
+      Address PR comments in README
+      Remove explicit setting of random seed
+      Replace SVG image with GitHub Permalink
+      Delete ProcessMapping.svg
+
+Taeung Song (28):
+      PR test
+      Merge pull request #71 from gentlelinuxer/master
+      PR test
+      Merge pull request #91 from gentlelinuxer/master
+      PR test
+      Merge pull request #107 from gentlelinuxer/master
+      Add hello2.txt
+      Merge pull request #121 from gentlelinuxer/master
+      PR test
+      Merge pull request #128 from gentlelinuxer/master
+      PR test
+      Merge pull request #136 from gentlelinuxer/master
+      PR test
+      Merge pull request #263 from gentlelinuxer/test
+      Merge pull request #294 from gentlelinuxer/fix-mnist
+      PR test
+      Merge pull request #437 from gentlelinuxer/PR-test
+      Add hello8.txt
+      Merge pull request #521 from gentlelinuxer/pr_test
+      Merge pull request #534 from gentlelinuxer/master
+      PR test
+      Merge pull request #554 from gentlelinuxer/master
+      PR test
+      Merge pull request #577 from gentlelinuxer/master
+      PR test
+      Merge pull request #598 from gentlelinuxer/pr_test
+      PR test
+      Merge pull request #624 from gentlelinuxer/pr_test
+
+Taufiquzzaman Peyash (1):
+      fix loss calculation for RNN (#732)
+
+Teaung Song (5):
+      Revert "Correct typo in default value within help (#667)"
+      Revert "added missing non-linearity"
+      Revert "Remove unused argument for test method. (#746)"
+      PR test
+      PR test
+
+Teng Li (2):
+      [Distributed] Multiprocessing Distributed Training for ImageNet Example (#441)
+      ImageNet, distributed bug fixes (#462)
+
+Thomas Viehmann (1):
+      Add linear layer to time series prediction
+
+Timothy Gebhard (1):
+      Unified order of flag names in argparser: short flag names ('-f') go before long flag names ('--foo'). (#449)
+
+Tom Sercu (1):
+      D( G(z).detach() ), added D means for monitoring
+
+Tongzhou Wang (2):
+      fix fast neural transfer on cuda (#392)
+      Fix snli device to work with newest torchtext (#394)
+
+Varun Agrawal (1):
+      replace Upsample layer with interpolate function (#424)
+
+Vipin Pillai (1):
+      Update all prec occurrences to acc (#420)
+
+Vishwak Srinivasan (1):
+      Eliminate .data access for parameters as much as possible (#767)
+
+Vitaly Fedyunin (1):
+      Add Cuda support to mnist_hogwild (#508)
+
+WangXi (1):
+      Divide Up args.workers by ngpus_per_node (#585)
+
+Will Feng (2):
+      Update C++ frontend examples for v1.4.0 (#697)
+      C++ autograd example (#745)
+
+Xingdong Zuo (3):
+      Changes in `reinforce.py` (#140)
+      VAE: use `F.sigmoid` as it is parameter-free (#338)
+      Update main.py (#520)
+
+Xinwei He (1):
+      Update main.py (#68)
+
+YLHii (1):
+      Simple typo fix to the download script
+
+Yang Yang (1):
+      Prefixed `at::` wherever `Reduction::` is used (#644)
+
+Yonghye Kwon (1):
+      loss detach (#731)
+
+Youngwook (1):
+      [C++][DCGAN] Increment batch_index before the if statements? (#523)
+
+Yüduo Wu (1):
+      delete .swp file. (#474)
+
+Zeming Lin (2):
+      Bigger network converges in 160 steps
+      Adds naive REINFORCE algorithm
+
+Zhengping Che (1):
+      Fix test data in time_sequence_prediction (#186)
+
+Zhuo Weng (1):
+      fix the issue PR #799 left (#781)
+
+Zihao Fu (1):
+      Add a time sequence prediction example (#118)
+
+andreh7 (2):
+      added comments in snli/train.py, no code changes (#177)
+      added a function makedirs() which works both for python 2 and 3 (#176)
+
+aromnvidia (1):
+      save/load optimizer state (#141)
+
+bassbone (1):
+      Delete unnecessary blank lines (#785)
+
+bddppq (2):
+      Fix ProgressMeter usage in imagenet validation (#577)
+      Fix epoch data type in cpp mnist example (#601)
+
+bintonto (1):
+      fix log cannot be printed right (#541)
+
+boathit (1):
+      change lr to 0.8 to fix the issue for 0.2
+
+boscotsang (1):
+      Fix test_epoch typo (#183)
+
+chao1224 (5):
+      parameter in test() function is useless
+      fix test() param, and fix bugs in nll_loss
+      add comments
+      remove useless line
+      unuse average over batch
+
+daquexian (2):
+      Add missing world size argument (#484)
+      Divide args.workers by ngpus_per_node (#485)
+
+dmitriy-serdyuk (1):
+      Remove rectifier before softmax (#117)
+
+ebetica (1):
+      Actor was not being used in actor-critic
+
+fshabashev (2):
+      Fix formatting to comply with PEP8 (#654)
+      Improving mnist example model (#658)
+
+gaurav pathak (1):
+      default number of training epoch should be 10 in the description
+
+huqinghao (1):
+      fix a bug in DCGAN (#121)
+
+joaqo (1):
+      Fix typo in imagenet/main.py (#135)
+
+joistick11 (1):
+      Fix error AttributeError: 'RNNModel' object has no attribute 'model_type' (#614)
+
+leotam (1):
+      Remove duplicated argument (#535)
+
+lzxzy (1):
+      update CXX compiler from 11 to 14 (#678)
+
+mattip (3):
+      Add CI to run examples via github action
+      fix warnings and failures
+      remove tput, causes errors in CI
+
+mrshenli (3):
+      Adding Distributed Model Parallel Training Example for RNN (#662)
+      Adding an RPC tutorial using a simple reinforcement learning application (#688)
+      Adding a distributed pipeline parallelism example for RPC (#749)
+
+nadavbh12 (1):
+      Handle tied + dimensions mismatch (#124)
+
+nsvanirudh (1):
+      Add missing rank argument (#490)
+
+pavel- (1):
+      Update README.md (#493)
+
+pbartet (1):
+      reinforcement_learning fix reward threshold
+
+peter (1):
+      Add copy logic for Windows
+
+peterjc123 (1):
+      Make the data preparation process cross-platform (#379)
+
+rarilurelo (1):
+      fix argparse type of gamma
+
+saikrishna_1996 (1):
+      Update README.md (#219)
+
+sergeant-wizard (1):
+      Remove unused argument for test method. (#746)
+
+siran (1):
+      open file explicitely using utf-8 (#366)
+
+smartkiwi (3):
+      Make example python 2.7 compatible
+      missing import
+      just remove the call
+
+soumith (23):
+      python 2.7 compatibility
+      add readme
+      adding readme for mnist
+      python 2.7 fixes
+      fix mnist example
+      some more bugfixes for imagenet example
+      working resnet training
+      fixing APU
+      fixes for optim API
+      adding target_transform to imagenet dataset
+      cleaning up imagenet example and making it depend on torchvision
+      removing redundant section
+      fixed mnist
+      fix data parallel and change checkpointing in dcgan
+      fixing inference to use volatile variables
+      fixing dcgan commandline
+      fix for API changes
+      __call__ to forward
+      remove tqdm deps
+      removing OpenNMT
+      fix for master
+      fixes for master
+      fix dcgan
+
+sulc (1):
+      Fix missing required argument for --evaluate. (#455)
+
+surgan12 (2):
+      Examples dcgan (#464)
+      Mnist update (#469)
+
+trault14 (1):
+      Bug fix in the calculation of the validation loss (#427)
+
+y0ast (1):
+      implement VAE
+
+晏旭瑞 (1):
+      Add dropout layer in reinforce (#509)
+
+박승원 (2):
+      Use argmax() instead of max()[1] in mnist/main.py (#494)
+      Remove deprecated & unused Variable() (#496)
+
+이중건 Isaac Lee (1):
+      Added instructive comments (#589)
+
