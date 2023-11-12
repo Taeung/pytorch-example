@@ -1,0 +1,86 @@
+[33mcommit 6c8e2bab4d45f2386929c83bb4480c18d2b660fd[m
+Author: mattip <matti.picus@gmail.com>
+Date:   Sun Jul 5 18:20:41 2020 +0300
+
+    fix warnings and failures
+
+[1mdiff --git a/dcgan/main.py b/dcgan/main.py[m
+[1mindex 4467e32..96d1feb 100644[m
+[1m--- a/dcgan/main.py[m
+[1m+++ b/dcgan/main.py[m
+[36m@@ -224,7 +224,8 @@[m [mfor epoch in range(opt.niter):[m
+         netD.zero_grad()[m
+         real_cpu = data[0].to(device)[m
+         batch_size = real_cpu.size(0)[m
+[31m-        label = torch.full((batch_size,), real_label, device=device)[m
+[32m+[m[32m        label = torch.full((batch_size,), real_label,[m
+[32m+[m[32m                           dtype=real_cpu.dtype, device=device)[m
+ [m
+         output = netD(real_cpu)[m
+         errD_real = criterion(output, label)[m
+[1mdiff --git a/fast_neural_style/download_saved_models.py b/fast_neural_style/download_saved_models.py[m
+[1mindex 71454bc..691c2c0 100644[m
+[1m--- a/fast_neural_style/download_saved_models.py[m
+[1m+++ b/fast_neural_style/download_saved_models.py[m
+[36m@@ -12,7 +12,10 @@[m [mimport zipfile[m
+ try:[m
+     from torch.utils.model_zoo import _download_url_to_file[m
+ except ImportError:[m
+[31m-    from torch.hub import _download_url_to_file[m
+[32m+[m[32m    try:[m
+[32m+[m[32m        from torch.hub import download_url_to_file as _download_url_to_file[m
+[32m+[m[32m    except ImportError:[m
+[32m+[m[32m        from torch.hub import _download_url_to_file[m
+ [m
+ [m
+ def unzip(source_filename, dest_dir):[m
+[1mdiff --git a/run_python_examples.sh b/run_python_examples.sh[m
+[1mindex e4de2fa..09f0a1d 100755[m
+[1m--- a/run_python_examples.sh[m
+[1m+++ b/run_python_examples.sh[m
+[36m@@ -148,6 +148,7 @@[m [mfunction word_language_model() {[m
+ [m
+ function clean() {[m
+   cd $BASE_DIR[m
+[32m+[m[32m  echo "running clean to remove cruft"[m
+   rm -rf dcgan/_cache_lsun_classroom_train_lmdb \[m
+     dcgan/fake_samples_epoch_000.png dcgan/lsun/ \[m
+     dcgan/_cache_lsunclassroomtrainlmdb \[m
+[36m@@ -194,17 +195,20 @@[m [mif [ "" == "$EXAMPLES" ]; then[m
+ else[m
+   for i in $(echo $EXAMPLES | sed "s/,/ /g")[m
+   do[m
+[32m+[m[32m    echo "Starting $i"[m
+     $i[m
+[32m+[m[32m    echo "Finished $i, status $?"[m
+   done[m
+ fi[m
+ [m
+ if [ "" == "$ERRORS" ]; then[m
+[31m-  tput setaf 2[m
+[31m-  echo "Completed successfully"[m
+[32m+[m[32m  [[ "$TERM" != "" ]] && [[ "$TERM" != "dumb" ]]  && tput setaf 2[m
+[32m+[m[32m  echo "Completed successfully with status $?"[m
+ else[m
+[31m-  tput setaf 1[m
+[32m+[m[32m  [[ "$TERM" != "" ]] && [[ "$TERM" != "dumb" ]]  && tput setaf 1[m
+   echo "Some examples failed:"[m
+   printf "$ERRORS"[m
+ fi[m
+ [m
+[31m-tput sgr0[m
+[32m+[m[32m[[ "$TERM" != "" ]] && [[ "$TERM" != "dumb" ]]  && tput sgr0[m
+[41m+[m
+[1mdiff --git a/word_language_model/main.py b/word_language_model/main.py[m
+[1mindex 6166036..6d88b35 100644[m
+[1m--- a/word_language_model/main.py[m
+[1m+++ b/word_language_model/main.py[m
+[36m@@ -180,7 +180,7 @@[m [mdef train():[m
+         # `clip_grad_norm` helps prevent the exploding gradient problem in RNNs / LSTMs.[m
+         torch.nn.utils.clip_grad_norm_(model.parameters(), args.clip)[m
+         for p in model.parameters():[m
+[31m-            p.data.add_(-lr, p.grad)[m
+[32m+[m[32m            p.data.add_(p.grad, alpha=-lr)[m
+ [m
+         total_loss += loss.item()[m
+ [m
