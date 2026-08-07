@@ -4,10 +4,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import json
+import requests as req
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 
-
+# hello!
+# hihi!
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -88,7 +91,7 @@ def main():
                         help='quickly check a single pass')
     parser.add_argument('--seed', type=int, default=1, metavar='S',
                         help='random seed (default: 1)')
-    parser.add_argument('--log-interval', type=int, default=10, metavar='N',
+    parser.add_argument('--log-interval', type=int, default=14, metavar='N',
                         help='how many batches to wait before logging training status')
     parser.add_argument('--save-model', action='store_true', default=False,
                         help='For Saving the current Model')
