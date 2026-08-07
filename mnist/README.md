@@ -1,5 +1,6 @@
 # Basic MNIST Example
-
+# My name is Yujeong
+# 3dfs
 ```bash
 pip install -r requirements.txt
 python main.py
