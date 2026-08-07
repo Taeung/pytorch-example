@@ -1,5 +1,6 @@
 from __future__ import print_function
 import argparse
+import json #변경222
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -132,3 +133,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'hello world!'
