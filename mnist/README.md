@@ -1,4 +1,6 @@
+# My name is Dokyoung Lee
 # Basic MNIST Example
+
 
 ```bash
 pip install -r requirements.txt
