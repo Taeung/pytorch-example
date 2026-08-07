@@ -1,5 +1,5 @@
 # Basic MNIST Example
-
+# name is jang
 ```bash
 pip install -r requirements.txt
 python main.py
