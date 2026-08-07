@@ -1,5 +1,5 @@
 # Basic MNIST Example
-
+# my name is se-chan
 ```bash
 pip install -r requirements.txt
 python main.py
