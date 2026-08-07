@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import requests
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 
@@ -128,6 +129,7 @@ def main():
 
     if args.save_model:
         torch.save(model.state_dict(), "mnist_cnn.pt")
+
 
 
 if __name__ == '__main__':
