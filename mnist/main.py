@@ -6,7 +6,11 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
-
+import json
+import time as t
+#123
+#123
+#222
 
 class Net(nn.Module):
     def __init__(self):
@@ -22,6 +26,7 @@ class Net(nn.Module):
         x = self.conv1(x)
         x = F.relu(x)
         x = self.conv2(x)
+	x = F.relu(x)
         x = F.max_pool2d(x, 2)
         x = self.dropout1(x)
         x = torch.flatten(x, 1)
@@ -132,3 +137,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+###dfadf
